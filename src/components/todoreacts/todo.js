@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 
-// get the localStorage data back
 const getLocalData = () => {
   const lists = localStorage.getItem("mytodolist");
 
@@ -18,7 +17,6 @@ const Todo = () => {
   const [isEditItem, setIsEditItem] = useState("");
   const [toggleButton, setToggleButton] = useState(false);
 
-  // add the items fucnction
   const addItem = () => {
     if (!inputdata) {
       alert("plz fill the data");
@@ -45,7 +43,6 @@ const Todo = () => {
     }
   };
 
-  //edit the items
   const editItem = (index) => {
     const item_todo_edited = items.find((curElem) => {
       return curElem.id === index;
